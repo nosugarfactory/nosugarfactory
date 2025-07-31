@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No Sugar Factory</title>
+  <meta name="description" content="No Sugar Factory — low calory • high protein • delicious" />
+
+  <!-- Open-source fonts via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Source+Sans+3:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --title-font: "Shrikhand", system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+      --tagline-font: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+
+      --fg: #ffffff;
+      --bg: #000000;
+
+      /* Tunable sizing (balanced) */
+      --title-min: 1.4rem;
+      --title-pref: 6vw;     /* scales with viewport */
+      --title-max: 3.2rem;
+
+      --tag-min: 1rem;
+      --tag-pref: 2.6vw;
+      --tag-max: 1.6rem;
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap{
+      text-align: center;
+      padding: 8vw 6vw;
+      max-width: 760px;      /* slightly narrower for balance */
+      width: 100%;
+    }
+
+    /* Title — single line, tempered size */
+    h1{
+      font-family: var(--title-font);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      margin: 0;
+      white-space: nowrap;                          /* keep on one line */
+      font-size: clamp(var(--title-min), var(--title-pref), var(--title-max));
+    }
+
+    /* Subtitle — a touch larger than before for balance */
+    .tagline{
+      font-family: var(--tagline-font);
+      font-style: italic;
+      margin: 0.6rem 0 0;
+      opacity: 0.9;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-size: clamp(var(--tag-min), var(--tag-pref), var(--tag-max));
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <h1>No Sugar Factory</h1>
+    <p class="tagline">low calory • high protein • delicious</p>
+  </main>
+</body>
+</html>
